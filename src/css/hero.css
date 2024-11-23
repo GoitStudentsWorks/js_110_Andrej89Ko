@@ -122,6 +122,13 @@ only screen and (min-resolution: 192dpi) {
 }
 
 @media screen and (min-width: 768px) {
+    .hero-container {background-image: url("../img/hero-bg/tabl-1x.png");}
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi) {
+    .hero-container {
+    background-image: url("../img/hero-bg/tabl-2x.png");
+            }
+        }
 
     .title {
         font-size: 136px;
@@ -142,6 +149,17 @@ only screen and (min-resolution: 192dpi) {
 
 @media screen and (min-width: 1280px) {
 
+    .hero-container {
+            background-image: url("../img/hero-bg/desc-1x.png");
+        }
+    
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi) {
+            .hero-container {
+                background-image: url("../img/hero-bg/desc-2x.png");
+            }
+        }
+
     .title {
         font-size: 80px;
     }
@@ -151,5 +169,6 @@ only screen and (min-resolution: 192dpi) {
         width: 1280px;
         height: 104px;
         flex-direction: row;
+        align-items: center;
     }
 }
