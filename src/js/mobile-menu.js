@@ -27,23 +27,34 @@
 
 // SWITCH
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle'); 
-  const themeElements = document.querySelectorAll('[data-theme]'); 
-
+  const themeToggles = [
+    document.getElementById('theme-toggle'),
+    document.getElementById('theme-toggle1')
+  ];
+  const themeElements = document.querySelectorAll('[data-theme]');
   const currentTheme = localStorage.getItem('theme') || 'light';
-  
+
   themeElements.forEach(element => {
     element.setAttribute('data-theme', currentTheme);
   });
 
-  themeToggle.checked = currentTheme === 'dark';
-  themeToggle.addEventListener('change', () => {
-    const newTheme = themeToggle.checked ? 'dark' : 'light';
-    themeElements.forEach(element => {
-      element.setAttribute('data-theme', newTheme);
-    });
+  themeToggles.forEach(toggle => {
+    toggle.checked = currentTheme === 'dark';
+  });
 
-    localStorage.setItem('theme', newTheme);
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('change', () => {
+      const newTheme = toggle.checked ? 'dark' : 'light';
+
+      themeElements.forEach(element => {
+        element.setAttribute('data-theme', newTheme);
+      });
+
+      themeToggles.forEach(otherToggle => {
+        otherToggle.checked = toggle.checked;
+      });
+
+      localStorage.setItem('theme', newTheme);
+    });
   });
 });
-
