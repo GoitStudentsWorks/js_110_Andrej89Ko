@@ -9,6 +9,7 @@
 @import url('./question-section.css');
 @import url('./work-together.css');
 @import url('./reviews.css');
+@import url('./footer.css');
 
 :root {
   --font-family: 'Poppins', sans-serif;
