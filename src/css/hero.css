@@ -19,21 +19,24 @@
 .hero {
     padding-top: 96px;
     padding-bottom: 56px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    background-image: url("../img/hero-bg/mob-1x.png");
 }
 
 .hero-container{
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center right;
-    background-size: cover;
-    align-content: center;
-    background-image: url("../img/hero-bg/mob-1x.png");
+    width: 360px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi) {
-    .hero-container {
+    .hero {
     background-image: url("../img/hero-bg/mob-2x.png");
     }
 }
@@ -48,11 +51,16 @@ only screen and (min-resolution: 192dpi) {
     text-transform: uppercase;
 }
 
+.hero-image{
+    display: none;
+}
+
 .order-btn-wrap{
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
     margin-bottom: 40px;
+    
 }
 
 .icon-arrow-hero {
@@ -63,8 +71,8 @@ only screen and (min-resolution: 192dpi) {
 .order-btn{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 20px;
-    line-height: 160%;
+    font-size: 18px;
+    line-height: 156%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-hero-text);
@@ -79,7 +87,16 @@ only screen and (min-resolution: 192dpi) {
     position: absolute;
     right: 0%;
     top: 0%;
+    transition: background-color 0.1s ease;
     background-color: var(--color-hero-accent);
+}
+
+.order-btn-wrap:hover .order-btn-block{
+    background-color: var(--color-title-second);
+}
+
+.order-btn:focus~.order-btn-block {
+    background-color: var(--color-title-second);
 }
 
 .highlight {
@@ -119,13 +136,27 @@ only screen and (min-resolution: 192dpi) {
     line-height: 150%;
     letter-spacing: 0.03em;
     color: var(--black);
+    transition: color 0.1s ease;
 }
 
+.social-links a:hover,
+.social-links a:focus{
+    color: var(--color-title-second);
+}
+
+
 @media screen and (min-width: 768px) {
-    .hero-container {background-image: url("../img/hero-bg/tabl-1x.png");}
+    .hero{
+    background-image: url("../img/hero-bg/tabl-1x.png");
+    }
+    .hero-container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    }
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
-    .hero-container {
+    .hero {
     background-image: url("../img/hero-bg/tabl-2x.png");
             }
         }
@@ -135,34 +166,91 @@ only screen and (min-resolution: 192dpi) {
         margin-bottom: 60px;
     }
 
+    .order-btn-wrap{
+        width: 416px;
+    }
+
+    .order-btn{
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.03em;
+    }
+
+    .order-btn-block{
+        width: 261px;
+        height: 96px;
+    }
+
+    .hero .description{
+        font-size: 20px;
+        line-height: 160%;
+    }
+
     .social-links {
         padding: 40px 0px;
         width: 768px;
         height: 104px;
         flex-direction: row;
+        justify-content: center;
+        gap: 40px;
     }
 
-    .social-links a {
-        align-items: center;
-    }
 }
 
 @media screen and (min-width: 1280px) {
+    .hero{ 
+        background-image: url("../img/hero-bg/desc-1x.png");
 
+    }
     .hero-container {
-            background-image: url("../img/hero-bg/desc-1x.png");
+            width: 1280px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
     
         @media only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (min-resolution: 192dpi) {
-            .hero-container {
+            .hero {
                 background-image: url("../img/hero-bg/desc-2x.png");
             }
         }
 
+        .hero-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        .order-btn-wrap{
+            width: 416px;
+            height: 96px;
+            padding-left: 72px;
+            margin-right: 136px;
+            position: relative;
+        }
+
+        .hero .description{
+                font-size: 20px;
+                line-height: 160%;
+                width: 592px;
+                margin-bottom: 116px;
+        }
+
     .title {
-        font-size: 80px;
+        font-size: 136px;
+        line-height: 115%;
+        letter-spacing: 0.01em;
     }
+
+
+    .hero-image {
+            display: inline-block;
+            width: 108px;
+            height: 108px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
 
     .social-links {
         padding: 40px 0px;
