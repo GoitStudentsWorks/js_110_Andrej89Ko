@@ -1,4 +1,5 @@
 import { TECH_SKILLS } from '../../constants.js';
+import icons from '../img/icons.svg';
 
 const tech = [
   {
@@ -41,7 +42,7 @@ const contentMarkup = (content, place = TECH_SKILLS.PLACE.UPPER) =>
         ? TECH_SKILLS.CSS_CLASS.UPPER_DOTS
         : TECH_SKILLS.CSS_CLASS.LOWER_DOTS
     } width="8" height="8">
-            <use href=${TECH_SKILLS.SEPARATOR_SVG_LOC}></use>
+            <use href=${icons}${TECH_SKILLS.SEPARATOR_NAME}></use>
           </svg>
           <a target="_blank" href=${tech.link}>
             <div class="item ${
@@ -53,6 +54,7 @@ const contentMarkup = (content, place = TECH_SKILLS.PLACE.UPPER) =>
   });
 
 const buildTechLine = (markup, reverse = false) => {
+  console.log("markup", markup);
   let element1 = document.createElement('div');
   let element2 = document.createElement('div');
   element1.classList.add('items', 'marquee');
