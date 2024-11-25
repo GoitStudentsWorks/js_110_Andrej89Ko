@@ -24,8 +24,11 @@
 }
 
 .section-container {
-  margin: 0px 20px;
+  padding: 0px 20px;
   margin-bottom: 80px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .benefits[data-theme='light'] {
@@ -66,7 +69,6 @@
   color: var(--color-accet-green-dt);
 }
 
-
 .benefits-icons[data-theme='light'] {
   fill: var(--color-accent-green);
 }
@@ -80,14 +82,16 @@
   height: 48px;
   border-radius: 8px;
   margin-bottom: 16px;
+  box-sizing: border-box;
+  padding: 12px;
 }
 
-.icons-bg[data-theme='light']{
-    background-color: var(--color-light-accet);
+.icons-bg[data-theme='light'] {
+  background-color: var(--color-light-accet);
 }
 
-.icons-bg[data-theme='dark']{
-    background-color: var(--color-dark-accet-dt);
+.icons-bg[data-theme='dark'] {
+  background-color: var(--color-dark-accet-dt);
 }
 
 .benefits-text-content {
@@ -105,21 +109,20 @@
   margin-bottom: 16px;
 }
 
-.btc-title[data-theme='light']{
-    color: var(--color-black);
+.btc-title[data-theme='light'] {
+  color: var(--color-black);
 }
 
-.btc-title[data-theme='dark']{
-    color: var(--color-white);
+.btc-title[data-theme='dark'] {
+  color: var(--color-white);
 }
 
-
-.btc-paragraf[data-theme='light']{
-    color: var(--color-black);
+.btc-paragraf[data-theme='light'] {
+  color: var(--color-black);
 }
 
-.btc-paragraf[data-theme='dark']{
-    color: var(--color-white);
+.btc-paragraf[data-theme='dark'] {
+  color: var(--color-white);
 }
 
 .btc-paragraf {
@@ -129,7 +132,6 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   margin-bottom: 16px;
   max-width: 336px;
   height: 96px;
@@ -137,7 +139,8 @@
 
 @media (min-width: 768px) {
   .section-container {
-    margin: 0px 32px;
+    padding: 0px 32px;
+    max-width: 704px;
     margin-bottom: 124px;
   }
   .section-title {
@@ -152,7 +155,6 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    height: 664px;
     width: 704px;
   }
   .icons-and-text {
@@ -175,7 +177,8 @@
 
 @media (min-width: 1280px) {
   .section-container {
-    margin: 0px 32px;
+    padding: 0px 32px;
+    max-width: 1216px;
     margin-bottom: 164px;
   }
   .section-title {
@@ -190,7 +193,6 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    height: 400px;
     width: 1216px;
   }
   .icons-and-text {
@@ -210,6 +212,7 @@
     grid-column: 3 / 4;
   }
   .section-container {
+    padding-top: 116px;
     background-image: image-set(
       url('../img/benefits-section-images/benefits-section-bg.png') 1x,
       url('../img/benefits-section-images/benefits-section-bg@2x.png') 2x
@@ -218,7 +221,7 @@
       url('../img/benefits-section-images/benefits-section-bg.png') 1x,
       url('../img/benefits-section-images/benefits-section-bg@2x.png') 2x
     );
-    background-position: 690px 0px;
+    background-position: 690px 0;
     background-repeat: no-repeat;
     background-size: 526px 408px;
   }
