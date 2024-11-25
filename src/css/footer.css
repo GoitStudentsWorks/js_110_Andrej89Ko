@@ -1,5 +1,8 @@
 .footer-border {
   border-top: 1px solid #e4e5e6;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-wrapper-container {
@@ -55,7 +58,12 @@
   margin: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
+  .footer-border {
+    max-width: none;
+    width: 768px;
+  }
+
   .footer-list {
     display: flex;
     flex-direction: row;
@@ -75,6 +83,10 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .footer-border {
+    width: 1280px;
+  }
+
   .footer-wrapper-container {
     display: flex;
     justify-content: space-between;
