@@ -94,10 +94,6 @@
   background-color: var(--color-dark-accet-dt);
 }
 
-.benefits-text-content {
-  margin-bottom: 32px;
-}
-
 .btc-title {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -154,24 +150,24 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
     width: 704px;
+    height: 664px;
   }
   .icons-and-text {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-  }
-  .icons-and-text2 {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-  }
-  .icons-and-text3 {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
-  .icons-and-text4 {
+  .icons-and-text2 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  .icons-and-text3 {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+  }
+  .icons-and-text4 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
   }
 }
 
@@ -189,11 +185,12 @@
     margin-bottom: 0px;
   }
   .icons-container {
+    margin-top: -110px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    width: 1216px;
+    grid-template-columns: repeat(3, 384px);
+    row-gap: 16px;
+    height: 400px;
   }
   .icons-and-text {
     grid-row: 1 / 2;
