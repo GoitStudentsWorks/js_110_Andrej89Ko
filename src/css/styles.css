@@ -11,6 +11,7 @@
 @import url('./question-section.css');
 @import url('./work-together.css');
 @import url('./reviews.css');
+@import url('./footer.css');
 
 
 :root {
@@ -43,6 +44,7 @@
   /*  --color-white: #F0F0F0;*/
   /*  --color-accet: #00B068;*/
   --color-bg: var(--color-white);
+  /* --color-border: #000;  */
   /*  --color-input-bg: #E4E5E6;*/
   /*  --color-accet-alternative: #BCDFD1;*/
   /*  --color-hover: #009156;*/
