@@ -1,45 +1,56 @@
+import image1 from '../img/imgProjects/imgForProjects/10project2x.png';
+import image2 from '../img/imgProjects/imgForProjects/11project2x.png';
+import image3 from '../img/imgProjects/imgForProjects/12project2x.png';
+import image4 from '../img/imgProjects/imgForProjects/9project2x.png';
+import image5 from '../img/imgProjects/imgForProjects/8project2x.png';
+import image6 from '../img/imgProjects/imgForProjects/7project2x.png';
+import image7 from '../img/imgProjects/imgForProjects/6project2x.png';
+import image8 from '../img/imgProjects/imgForProjects/5project2x.png';
+import image9 from '../img/imgProjects/imgForProjects/2project2x.png';
+import image10 from '../img/imgProjects/imgForProjects/1project2x.png';
+
 const load = document.querySelector('.LoadImg');
 const Nomore = document.querySelector('.projectBtnLoad');
 
 const collectionImg = [
   {
-    src: '/command-project-portfolio/assets/10project2x.png',
+    src: image1,
     name: 'power pulse webservice',
   },
   {
-    src: '/command-project-portfolio/assets/11project2x.png',
+    src: image2,
     name: 'wallet webservice',
   },
   {
-    src: '/command-project-portfolio/assets/12project2x.png',
+    src: image3,
     name: 'English excellence webservice',
   },
   {
-    src: '/command-project-portfolio/assets/9project2x.png',
+    src: image4,
     name: 'green harvest online store',
   },
   {
-    src: '/command-project-portfolio/assets/8project2x.png',
+    src: image5,
     name: 'vyshyvanka vibes Landing Page',
   },
   {
-    src: '/command-project-portfolio/assets/7project2x.png',
+    src: image6,
     name: 'mimino website',
   },
   {
-    src: '/command-project-portfolio/assets/6project2x.png',
+    src: image7,
     name: 'chego jewelry website',
   },
   {
-    src: '/command-project-portfolio/assets/5project2x.png',
+    src: image8,
     name: 'fruitbox online store',
   },
   {
-    src: '/command-project-portfolio/assets/2project2x.png',
+    src: image9,
     name: 'energy flow webservice',
   },
   {
-    src: '/command-project-portfolio/assets/1project2x.png',
+    src: image10,
     name: 'starlight studio landing page',
   },
 ];
