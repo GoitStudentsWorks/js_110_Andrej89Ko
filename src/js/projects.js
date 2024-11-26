@@ -3,43 +3,43 @@ const Nomore = document.querySelector('.projectBtnLoad');
 
 const collectionImg = [
   {
-    src: './img/imgProjects/imgForProjects/10project2x.png',
+    src: '/command-project-portfolio/assets/10project2x.png',
     name: 'power pulse webservice',
   },
   {
-    src: './img/imgProjects/imgForProjects/11project2x.png',
+    src: '/command-project-portfolio/assets/11project2x.png',
     name: 'wallet webservice',
   },
   {
-    src: './img/imgProjects/imgForProjects/12project2x.png',
+    src: '/command-project-portfolio/assets/12project2x.png',
     name: 'English excellence webservice',
   },
   {
-    src: './img/imgProjects/imgForProjects/9project2x.png',
+    src: '/command-project-portfolio/assets/9project2x.png',
     name: 'green harvest online store',
   },
   {
-    src: './img/imgProjects/imgForProjects/8project2x.png',
+    src: '/command-project-portfolio/assets/8project2x.png',
     name: 'vyshyvanka vibes Landing Page',
   },
   {
-    src: './img/imgProjects/imgForProjects/7project2x.png',
+    src: '/command-project-portfolio/assets/7project2x.png',
     name: 'mimino website',
   },
   {
-    src: './img/imgProjects/imgForProjects/6project2x.png',
+    src: '/command-project-portfolio/assets/6project2x.png',
     name: 'chego jewelry website',
   },
   {
-    src: './img/imgProjects/imgForProjects/5project2x.png',
+    src: '/command-project-portfolio/assets/5project2x.png',
     name: 'fruitbox online store',
   },
   {
-    src: './img/imgProjects/imgForProjects/2project2x.png',
+    src: '/command-project-portfolio/assets/2project2x.png',
     name: 'energy flow webservice',
   },
   {
-    src: './img/imgProjects/imgForProjects/1project2x.png',
+    src: '/command-project-portfolio/assets/1project2x.png',
     name: 'starlight studio landing page',
   },
 ];
