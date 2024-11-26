@@ -4,10 +4,15 @@
 @import url('./common.css');
 @import url('./header.css');
 @import url('./mobile-menu.css');
-@import url('./tech-skills.css');
-@import url('./question-section.css');
 @import url('./about-me.css');
-@import url('./reviews.css');   
+@import url('./tech-skills.css');
+@import url('./projects.css');
+@import url('./hero.css');
+@import url('./benefits.css');
+@import url('./question-section.css');
+@import url('./work-together.css');
+@import url('./reviews.css');
+@import url('./footer.css');
 
 :root {
   --font-family: 'Poppins', sans-serif;
@@ -39,6 +44,7 @@
   /*  --color-white: #F0F0F0;*/
   /*  --color-accet: #00B068;*/
   --color-bg: var(--color-white);
+  /* --color-border: #000;  */
   /*  --color-input-bg: #E4E5E6;*/
   /*  --color-accet-alternative: #BCDFD1;*/
   /*  --color-hover: #009156;*/

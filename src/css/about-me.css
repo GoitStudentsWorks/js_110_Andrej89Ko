@@ -21,11 +21,9 @@
 
 .about-section {
   background: none;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  margin-bottom: 80px;
+  padding: 0 0 80px 0;
 }
 
 .about-section[data-theme='light'] {
@@ -87,10 +85,12 @@
 }
 
 .about-images {
-  border-radius: 16px;
-  width: 320px;
-  height: 374px;
-  margin-bottom: 40px;
+  border-radius: 25px;
+  height: auto;
+}
+
+.about-bio-section {
+  max-width: 360px;
 }
 
 .about-description {
@@ -103,16 +103,16 @@
   margin-bottom: 24px;
 }
 
+.about-me-bio {
+  padding: 40px 0 40px 0;
+}
+
 .about-description[data-theme='light'] {
   color: var(--black);
 }
 
 .about-description[data-theme='dark'] {
   color: var(--white);
-}
-
-.about-education-container {
-  margin-top: 40px;
 }
 
 #about-list {
@@ -150,11 +150,9 @@
   color: var(--white);
 }
 
-.about-role-container {
-  margin-top: 28px;
-}
-
 #about-list-role {
+  display: flex;
+  flex-direction: column;
   list-style-type: disc;
   margin-left: 20px;
 }
@@ -189,10 +187,13 @@
   color: var(--white);
 }
 
+.about-role-container {
+  padding: 28px 0 0 0;
+}
+
 @media (min-width: 768px) {
   .about-section {
-    margin-bottom: 124px;
-    padding: 0 32px;
+    padding: 0 0 124px 0;
     background-image: image-set(
       url('../img/about-section-images/about-bg-tablet.png') 1x,
       url('../img/about-section-images/about-bg-tablet@2x.png') 2x
@@ -219,14 +220,16 @@
   .about-images {
     margin-top: 408px;
     width: 336px;
-    height: 392px;
   }
   #about-list {
+    display: flex;
+    flex-direction: column;
     margin-left: 32px;
   }
   .about-bio-section {
     display: flex;
-    gap: 32px;
+    justify-content: space-between;
+    max-width: 704px;
   }
   .about-panel {
     max-width: 336px;
@@ -234,18 +237,20 @@
   .about-education-section {
     display: flex;
     gap: 32px;
+    flex-direction: row;
+    padding: 60px 0 0 0;
   }
   .about-me-list {
     max-width: 336px;
   }
-  .about-education-container {
-    margin-top: 28px;
+  .about-role-container {
+    padding: 0;
   }
 }
 
 @media (min-width: 1280px) {
   .about-section {
-    margin-bottom: 164px;
+    padding: 0 0 164px 0;
     background-image: image-set(
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
@@ -254,18 +259,17 @@
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
     );
-    background-position: 700px 700px;
+    background-position: 800px 700px;
     background-size: 396px 302px;
   }
   .about-images {
     margin-top: 312px;
-    width: 384px;
-    height: 448px;
   }
   .about-bio-section {
     gap: 136px;
     justify-content: center;
-    margin-left: 240px;
+    margin-left: 208px;
+    max-width: 1008px;
   }
   .about-panel {
     max-width: 488px;
@@ -273,6 +277,7 @@
   .about-education-section {
     gap: 136px;
     justify-content: center;
+    padding: 80px 0 0 0;
   }
   .about-me-list {
     max-width: 384px;
