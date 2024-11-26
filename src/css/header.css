@@ -1,14 +1,8 @@
-.additional {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 360px;
+  width: 320px;
   height: 64px;
 }
 
@@ -25,8 +19,8 @@
   line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-left: 20px;
   display: block;
+  /* margin-left: 20px; */
 }
 
 .logo-text[data-theme='light'] {
@@ -58,7 +52,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .icon-menu-button[data-theme='light'] {
@@ -69,10 +63,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .additional {
-    margin-bottom: 16px;
-  }
-
   .menu-button {
     display: none;
   }
@@ -89,8 +79,8 @@
   .logo-text {
     font-size: 32px;
     letter-spacing: 0.05em;
+    margin-right: 101px;
     margin-left: 32px;
-    margin-right: 191px;
   }
 
     .theme-switch {
@@ -138,6 +128,7 @@
     }
 
   .nav-text {
+    width: 305px;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -176,15 +167,11 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .additional {
-    margin-bottom: 16px;
-  }
-
   .header-container {
     width: 1280px;
   }
 
   .logo-text {
-    margin-right: 703px;
+    margin-right: 590px;
   }
 }
