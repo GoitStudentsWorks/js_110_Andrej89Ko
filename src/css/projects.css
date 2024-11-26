@@ -2,34 +2,22 @@
   box-sizing: border-box;
 }
 
-.myProject .container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .titleMain {
   font-family: 'impact', sans-serif;
   text-align: center;
 }
-/* #projects {
-  background-color: #f0f0f0;
-} */
 img {
   object-fit: cover;
   height: 100%;
-  width: 100%;
 }
-
+.project-container {
+  padding: 0 136px;
+}
 .myProject[data-theme='light'] {
   background-color: #f0f0f0;
 }
 .myProject[data-theme='dark'] {
   background-color: #1e2023;
-}
-.myProject {
-  padding: 0 20px;
-  margin: 0 auto;
-  margin-bottom: 80px;
 }
 .LoadImg {
   display: flex;
@@ -99,6 +87,9 @@ img {
   font-weight: 300;
   letter-spacing: 0.5px;
   margin-top: 12px;
+}
+.wrapContentItem:not(:last-child) {
+  margin-bottom: 80px;
 }
 .wrapBtnText {
   display: flex;
@@ -200,9 +191,6 @@ img {
 .projectTWrap {
   margin-top: 40px;
 }
-.container {
-  box-sizing: border-box;
-}
 
 .wrapBtnText {
   align-items: flex-end;
@@ -216,10 +204,6 @@ img {
 /* media q  */
 
 @media (min-width: 360px) {
-  .container {
-    max-width: 360px;
-    margin: 0 auto;
-  }
   .titleMain {
     margin-bottom: 40px;
   }
@@ -234,14 +218,8 @@ img {
   }
 }
 @media (min-width: 768px) {
-  .myProject {
-    margin-bottom: 124px;
-  }
-
   .container {
     max-width: 768px;
-    padding: 0;
-    margin: 0;
   }
   .wrapContent {
     display: block;
@@ -294,15 +272,8 @@ img {
   }
 }
 @media (min-width: 1280px) {
-  .myProject {
-    margin-bottom: 48px;
-  }
-
   .container {
     max-width: 1280px;
-    padding-left: 110px;
-    padding-right: 110px;
-    margin: 0 auto;
   }
   .marginLeft {
     margin-right: 244px;
