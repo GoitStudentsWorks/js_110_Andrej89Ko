@@ -2,17 +2,17 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./common.css');
-@import url('./header.css');
-@import url('./mobile-menu.css');
+/* @import url('./header.css');
+@import url('./mobile-menu.css'); */
 @import url('./about-me.css');
-@import url('./tech-skills.css');
+/* @import url('./tech-skills.css');
 @import url('./projects.css');
 @import url('./hero.css');
 @import url('./benefits.css');
 @import url('./question-section.css');
 @import url('./work-together.css');
 @import url('./reviews.css');
-@import url('./footer.css');
+@import url('./footer.css'); */
 
 :root {
   --font-family: 'Poppins', sans-serif;
