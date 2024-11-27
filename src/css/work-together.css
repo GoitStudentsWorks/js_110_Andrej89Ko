@@ -5,6 +5,9 @@ body {
 .contact-section {
   background-color: #f0f0f0;
   margin: 0 auto;
+}
+
+.contact-section .container {
   position: relative;
 }
 
@@ -14,6 +17,12 @@ body {
 
 .contact-section .container {
   padding-bottom: 80px;
+}
+
+.contants-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .title {
@@ -210,6 +219,7 @@ body {
   text-align: center;
   border: none;
   border-radius: 16px;
+  max-width: 320px;
 }
 
 .contact-section[data-theme='dark'] .modal-content {
@@ -323,6 +333,7 @@ body {
 
   .modal-content {
     padding: 64px;
+    max-width: 492px;
   }
 
   .background {
@@ -330,8 +341,8 @@ body {
     position: absolute;
     width: 336px;
     height: 260px;
-    bottom: 84%;
-    left: 52%;
+    top: -120px;
+    right: 32px;
   }
 }
 
@@ -343,6 +354,11 @@ body {
     row-gap: 80px;
     column-gap: 136px;
     padding-bottom: 164px;
+  }
+
+  .contants-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .title {
@@ -363,8 +379,8 @@ body {
   .background {
     width: 526px;
     height: 408px;
-    top: -20%;
-    left: 56%;
+    top: -116px;
+    right: 32px;
   }
 
   #contact-form {
