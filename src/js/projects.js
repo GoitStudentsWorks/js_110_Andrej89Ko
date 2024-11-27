@@ -8,8 +8,9 @@ import image7 from '../img/imgProjects/imgForProjects/6project2x.png';
 import image8 from '../img/imgProjects/imgForProjects/5project2x.png';
 import image9 from '../img/imgProjects/imgForProjects/2project2x.png';
 import image10 from '../img/imgProjects/imgForProjects/1project2x.png';
+import svgArrows from '../img/arrow.svg';
 
-const load = document.querySelector('.LoadImg');
+const load = document.querySelector('.wrapContent');
 const Nomore = document.querySelector('.projectBtnLoad');
 
 const collectionImg = [
@@ -58,10 +59,16 @@ const collectionImg = [
 let countI = 0;
 const carcassImage = photo => {
   return `
-    <li class="carcassItem">
-      <img class="imgWrap" src="${photo.src}" heigth="500" width="1000" alt="">
-      <a class="siteLoad" href="https://www.edu.goit.global/uk/homepage" target="_blank" rel="nofollow">
-      <p class="loadText">${photo.name}</p></a>
+    <li class="wrapContentItem">
+      <img src="${photo.src}" heigth="500" width="1000" alt="">
+      <p class="projectTextTech">react, java script, node js, git</p>
+        <div class="wrapBtnText" data-theme="light">
+                        <p class="projectTextTitle">${photo.name}</p>
+                        <a type="button" target="_blank" rel="nofollow" href="https://www.w3schools.com/js/default.asp"
+                            class="projectBtnVisit">visit<svg class="arrSvg" height="24" width="24">
+                                <use href="${svgArrows}#icon-iconarrow"></use>
+                            </svg></a>
+                    </div>
     </li>`;
 };
 
