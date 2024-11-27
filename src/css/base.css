@@ -38,10 +38,10 @@
         url('../fonts/poppins-v21-latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
   }
 
-  font-family: Impact, sans-serif;
+  /* font-family: Impact, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 400; */
 
   color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
@@ -56,10 +56,6 @@
 body {
   display: flex;
   flex-direction: column;
-  /*min-width: 100vw;*/
-  /*min-height: 100vh;*/
-  margin: 0;
-  background-color: var(--color-bg);
 }
 
 main {
