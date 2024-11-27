@@ -24,12 +24,11 @@
   }
 })();
 
-
 // SWITCH
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggles = [
     document.getElementById('theme-toggle'),
-    document.getElementById('theme-toggle1')
+    document.getElementById('theme-toggle1'),
   ];
   const themeElements = document.querySelectorAll('[data-theme]');
   const currentTheme = localStorage.getItem('theme') || 'light';
