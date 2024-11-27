@@ -8,8 +8,9 @@ import image7 from '../img/imgProjects/imgForProjects/6project2x.png';
 import image8 from '../img/imgProjects/imgForProjects/5project2x.png';
 import image9 from '../img/imgProjects/imgForProjects/2project2x.png';
 import image10 from '../img/imgProjects/imgForProjects/1project2x.png';
+import svgArrows from '../img/arrow.svg';
 
-const load = document.querySelector('.LoadImg');
+const load = document.querySelector('.wrapContent');
 const Nomore = document.querySelector('.projectBtnLoad');
 
 const collectionImg = [
@@ -58,15 +59,17 @@ const collectionImg = [
 let countI = 0;
 const carcassImage = photo => {
   return `
-  <div class="wrapLoadImg">
-  <ul class="wrapCarcass">
-    <li>
-      <img class="imgWrap" src="${photo.src}" heigth="500" width="1000" alt="">
-      <a class="siteLoad" href="https://www.edu.goit.global/uk/homepage" target="_blank" rel="nofollow">
-      <p class="loadText">${photo.name}</p></a>
-    </li>
-  </ul>
-</div>`;
+    <li class="wrapContentItem">
+      <img src="${photo.src}" heigth="500" width="1000" alt="">
+      <p class="projectTextTech">react, java script, node js, git</p>
+        <div class="wrapBtnText" data-theme="light">
+                        <p class="projectTextTitle">${photo.name}</p>
+                        <a type="button" target="_blank" rel="nofollow" href="https://www.w3schools.com/js/default.asp"
+                            class="projectBtnVisit">visit<svg class="arrSvg" height="24" width="24">
+                                <use href="${svgArrows}#icon-iconarrow"></use>
+                            </svg></a>
+                    </div>
+    </li>`;
 };
 
 const openBox = img => {
@@ -82,46 +85,3 @@ const openBox = img => {
   }
 };
 Nomore.addEventListener('click', openBox);
-
-// const collectionImg = [
-//   {
-//     src: '../img/imgProjects/imgForProjects/10project2x.png',
-//     name: 'power pulse webservice',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/11project2x.png',
-//     name: 'wallet webservice',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/12project2x.png',
-//     name: 'English excellence webservice',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/9project2x.png',
-//     name: 'green harvest online store',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/8project2x.png',
-//     name: 'vyshyvanka vibes Landing Page',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/7project2x.png',
-//     name: 'mimino website',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/6project2x.png',
-//     name: 'chego jewelry website',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/5project2x.png',
-//     name: 'fruitbox online store',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/2project2x.png',
-//     name: 'energy flow webservice',
-//   },
-//   {
-//     src: '../img/imgProjects/imgForProjects/1project2x.png',
-//     name: 'starlight studio landing page',
-//   },
-// ];
