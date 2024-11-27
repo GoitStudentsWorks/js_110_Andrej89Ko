@@ -1,26 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
-  const modal = document.getElementById('modal');
+  const modal = document.getElementById('modal-together');
   const modalMessage = document.getElementById('modal-message');
   const closeModalBtn = document.querySelector('.close');
   const body = document.body;
 
-  const closeModal = () => {
-    modal.classList.remove('is-open');
-    body.style.overflow = '';
-  };
-
-  closeModalBtn.addEventListener('click', closeModal);
-  window.addEventListener('click', (event) => {
+  const handleOutsideClick = (event) => {
     if (event.target === modal) {
+      console.log('Outside click detected');
       closeModal();
     }
-  });
-  window.addEventListener('keydown', (event) => {
+  };
+
+  const handleEscapeKey = (event) => {
+    console.log('Keydown event detected: ', event.key);
     if (event.key === 'Escape') {
       closeModal();
     }
-  });
+  };
+
+  const closeModal = () => {
+    console.log('Modal is closing');
+    modal.classList.remove('is-open');
+    body.style.overflow = '';
+    removeEventListeners();
+  };
+
+  const addEventListeners = () => {
+    console.log('Adding event listeners');
+    closeModalBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', handleOutsideClick);
+    window.addEventListener('keydown', handleEscapeKey);
+  };
+
+  const removeEventListeners = () => {
+    console.log('Removing event listeners');
+    closeModalBtn.removeEventListener('click', closeModal);
+    window.removeEventListener('click', handleOutsideClick);
+    window.removeEventListener('keydown', handleEscapeKey);
+  };
+
+  const openModal = () => {
+    console.log('Opening modal');
+    modal.classList.add('is-open');
+    body.style.overflow = 'hidden';
+    addEventListeners();
+  };
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -46,12 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         modalMessage.textContent = 'There was an error with your request. Please try again.';
       }
 
-      modal.classList.add('is-open');
-      body.style.overflow = 'hidden';
+      openModal();
     } catch (error) {
       modalMessage.textContent = 'An error occurred. Please try again.';
-      modal.classList.add('is-open');
-      body.style.overflow = 'hidden'; 
+      openModal();
     }
   });
 });

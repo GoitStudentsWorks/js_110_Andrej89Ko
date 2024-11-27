@@ -26,7 +26,6 @@
 }
 
 .questions-section .container {
-  margin: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
