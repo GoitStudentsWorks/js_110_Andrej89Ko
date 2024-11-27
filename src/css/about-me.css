@@ -192,8 +192,8 @@
 }
 
 @media (min-width: 768px) {
-  .about-section {
-    padding: 0 0 124px 0;
+  .about-section .container {
+    padding: 0 32px;
     background-image: image-set(
       url('../img/about-section-images/about-bg-tablet.png') 1x,
       url('../img/about-section-images/about-bg-tablet@2x.png') 2x
@@ -202,9 +202,12 @@
       url('../img/about-section-images/about-bg-tablet.png') 1x,
       url('../img/about-section-images/about-bg-tablet@2x.png') 2x
     );
-    background-position: 368px 856px;
+    background-position: 400px 856px;
     background-repeat: no-repeat;
     background-size: 346px 264px;
+  }
+  .about-section {
+    padding: 0 0 124px 0;
   }
   .about-section-header {
     font-size: 108px;
@@ -249,8 +252,8 @@
 }
 
 @media (min-width: 1280px) {
-  .about-section {
-    padding: 0 0 164px 0;
+  .about-section .container {
+    padding: 0;
     background-image: image-set(
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
@@ -259,8 +262,11 @@
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
     );
-    background-position: 800px 700px;
+    background-position: 790px 700px;
     background-size: 396px 302px;
+  }
+  .about-section {
+    padding: 0 0 164px 0;
   }
   .about-images {
     margin-top: 312px;
@@ -283,3 +289,4 @@
     max-width: 384px;
   }
 }
+
