@@ -16,29 +16,21 @@
   --color-hero-text: var(--color-white);
 }
 
-.hero {
-  padding-top: 96px;
+.hero-section {
+  padding-top: 112px;
+  padding-bottom: 80px;
+}
+
+.hero-section {
   background-repeat: no-repeat;
-  background-position: center right;
-  background-size: cover;
+  background-position: center 27px;
+  background-size: 320px 704px;
   background-image: url('../img/hero-bg/mob-1x.png');
-}
-
-#hero {
-  margin-bottom: 80px;
-}
-
-.hero-container {
-  width: 360px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi) {
-  .hero {
+  .hero-section {
     background-image: url('../img/hero-bg/mob-2x.png');
   }
 }
@@ -61,7 +53,6 @@
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-bottom: 40px;
 }
 
 .icon-arrow-hero {
@@ -104,30 +95,34 @@
   color: var(--color-title-second);
 }
 
-.hero .description {
+.hero-section .description {
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
-  line-height: 156%;
+  line-height: 1.55556;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-hero-text);
-  margin-bottom: 72px;
+  color: var(--black);
+}
+
+[data-theme='dark'] .description {
+  color: var(--white);
 }
 
 .social-links-bg {
   background: var(--color-social-links-bg);
-  width: 100%;
 }
+
 .social-links {
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  margin-top: 72px;
 }
 
 .social-links a {
@@ -145,23 +140,23 @@
   color: var(--color-title-second);
 }
 
-@media screen and (min-width: 768px) {
-  #hero {
-    margin-bottom: 124px;
-  }
+.hero-footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
 
-  .hero {
-    padding-bottom: 50px;
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 88px;
+    padding-bottom: 124px;
+    background-size: 704px 945px;
+    background-position: center 16px;
     background-image: url('../img/hero-bg/tabl-1x.png');
-  }
-  .hero-container {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
-    .hero {
+    .hero-section {
       background-image: url('../img/hero-bg/tabl-2x.png');
     }
   }
@@ -186,15 +181,13 @@
     height: 96px;
   }
 
-  .hero .description {
+  .hero-section .description {
     font-size: 20px;
-    line-height: 160%;
+    line-height: 1.6;
   }
 
   .social-links {
-    padding: 0;
-    width: 768px;
-    height: 104px;
+    margin-top: 80px;
     flex-direction: row;
     justify-content: center;
     gap: 40px;
@@ -202,11 +195,11 @@
 }
 
 @media screen and (min-width: 1280px) {
-  #hero {
-    margin-bottom: 164px;
-  }
-
-  .hero {
+  .hero-section {
+    padding-top: 184px;
+    padding-bottom: 164px;
+    background-size: 1300px 772px;
+    background-position: top 50%;
     background-image: url('../img/hero-bg/desc-1x.png');
   }
   .hero-container {
@@ -218,36 +211,26 @@
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
-    .hero {
+    .hero-section {
       background-image: url('../img/hero-bg/desc-2x.png');
     }
   }
 
   .hero-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 136px;
   }
 
   .order-btn-wrap {
-    width: 416px;
-    height: 96px;
-    padding-left: 72px;
-    margin-right: 136px;
-    position: relative;
-  }
-
-  .hero .description {
-    font-size: 20px;
-    line-height: 160%;
-    width: 592px;
-    margin-bottom: 116px;
+    width: 0;
+    min-width: 416px;
   }
 
   .hero-title {
     font-size: 136px;
     line-height: 115%;
     letter-spacing: 0.01em;
+    margin-bottom: 80px;
   }
 
   .hero-image {
@@ -259,7 +242,7 @@
   }
 
   .social-links {
-    width: 1280px;
+    margin-top: 132px;
     flex-direction: row;
     align-items: center;
   }
