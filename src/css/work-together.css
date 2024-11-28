@@ -15,7 +15,7 @@ body {
   background-color: #1e2023;
 }
 
-.contact-section .container {
+.contact-section {
   padding-bottom: 80px;
 }
 
@@ -132,11 +132,6 @@ body {
 }
 .button {
   width: 100%;
-}
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .contact-section[data-theme='dark'] .email-input {
@@ -288,10 +283,13 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .contact-section {
+    padding-bottom: 124px;
+  }
+
   .contact-section .container {
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 124px;
   }
 
   .contacts {
@@ -347,13 +345,16 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
+  .contact-section {
+    padding-bottom: 164px;
+  }
+
   .contact-section .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 80px;
     column-gap: 136px;
-    padding-bottom: 164px;
   }
 
   .contants-container {
