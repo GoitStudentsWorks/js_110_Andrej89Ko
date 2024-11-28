@@ -60,11 +60,11 @@ let countI = 0;
 const carcassImage = photo => {
   return `
     <li class="wrapContentItem">
-      <img src="${photo.src}" heigth="500" width="1000" alt="">
+      <img src="${photo.src}" heigth="500" width="1000" alt="${photo.name}">
       <p class="projectTextTech">react, java script, node js, git</p>
         <div class="wrapBtnText" data-theme="light">
                         <p class="projectTextTitle">${photo.name}</p>
-                        <a type="button" target="_blank" rel="nofollow" href="https://www.w3schools.com/js/default.asp"
+                        <a target="_blank" rel="nofollow" href="https://www.w3schools.com/js/default.asp"
                             class="projectBtnVisit">visit<svg class="arrSvg" height="24" width="24">
                                 <use href="${svgArrows}#icon-iconarrow"></use>
                             </svg></a>
