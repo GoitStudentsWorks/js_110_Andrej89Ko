@@ -2,10 +2,6 @@
   box-sizing: border-box;
 } */
 
-.projectContainer {
-  box-sizing: content-box;
-}
-
 .projectContainer picture,
 .projectContainer img {
   width: 100%;
@@ -269,6 +265,9 @@ img {
   }
 }
 @media (min-width: 1280px) {
+  .projectContainer {
+    padding: 0 136px;
+  }
   .wrapContentItem {
     margin-bottom: 80px;
   }

@@ -73,7 +73,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: auto;
+  height: 296px;
 }
 
 @media (max-width: 360px) {
@@ -84,7 +84,6 @@
 
 .feedback-text {
   font-family: var(--font-family);
-  margin-bottom: 24px;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -151,4 +150,10 @@
     border: 1px solid transparent;
   }
   pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .swiper-slide.feedback-item {
+    height: 224px;
+  }
 }
