@@ -23,7 +23,7 @@
   /*   max-width: 375px; */
     padding: 0 2px;
   /*   margin: 0 auto; */
-    margin-bottom:80px;
+    padding-bottom:80px;
 }
 
 .wrap {
@@ -176,7 +176,7 @@
     .tech-skills {
     /*     max-width: 768px; */
         padding: 0 2px;
-        margin-bottom:124px;
+        padding-bottom:124px;
       }
   .item{
     font-size: 36px;
@@ -191,6 +191,6 @@
  .tech-skills {
     /* max-width: 1280px; */
     /*padding: 0 50px;*/
-    margin-bottom:164px;
+    padding-bottom:164px;
       }
 }
