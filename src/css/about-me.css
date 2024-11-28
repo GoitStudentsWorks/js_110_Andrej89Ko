@@ -135,7 +135,6 @@ li.about-item {
   line-height: 150%;
   letter-spacing: 0.03em;
   color: var(--black);
- 
 }
 li.about-item:not(:last-child) {
   margin-bottom: 12px;
@@ -175,7 +174,6 @@ li.about-item:not(:last-child) {
   line-height: 150%;
   letter-spacing: 0.03em;
   color: var(--black);
- 
 }
 li.about-item-role:not(:last-child) {
   margin-bottom: 12px;
@@ -188,7 +186,6 @@ li.about-item-role:not(:last-child) {
 .about-item-role[data-theme='dark'] {
   color: var(--white);
 }
-
 
 @media (min-width: 768px) {
   .about-section .container {
@@ -222,17 +219,16 @@ li.about-item-role:not(:last-child) {
     margin-bottom: 32px;
   }
   .about-images {
-    padding-top: 408px;
-    
+    margin-top: 408px;
   }
   .about-list {
     display: flex;
     flex-direction: column;
     margin-left: 32px;
   }
-.about-description {
-  font-family: Popins, sans-serif;
-}
+  .about-description {
+    font-family: Popins, sans-serif;
+  }
 
   li.about-item:not(:last-child) {
     margin-bottom: 16px;
@@ -267,7 +263,6 @@ li.about-item-role:not(:last-child) {
 
 @media screen and (min-width: 1280px) {
   .about-section .container {
-    padding: 0;
     background-image: image-set(
       url('../img/about-section-images/about-bg-desctop.png') 1x,
       url('../img/about-section-images/about-bg-desctop@2x.png') 2x
@@ -278,17 +273,20 @@ li.about-item-role:not(:last-child) {
     );
     background-position: 790px 700px;
     background-size: 396px 302px;
+    width: 1280px;
   }
   .about-section {
     padding: 0 0 164px 0;
   }
   .about-images {
-    padding-top: 312px;
+    margin-top: 312px;
   }
 
   .about-bio-section {
     gap: 136px;
     justify-content: center;
+    max-width: 1008px;
+    margin-left: auto;
   }
 
   .about-panel {
@@ -305,4 +303,3 @@ li.about-item-role:not(:last-child) {
     max-width: 384px;
   }
 }
-
