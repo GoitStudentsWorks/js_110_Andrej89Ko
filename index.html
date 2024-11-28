@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>command-project-portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/js_110_Andrej89Ko/assets/favicon-DRvs352j.ico">
+  <link rel="apple-touch-icon" href="/js_110_Andrej89Ko/assets/favicon-DRvs352j.ico">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+  <script type="module" crossorigin src="/js_110_Andrej89Ko/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/js_110_Andrej89Ko/assets/vendor-CMKjw0WY.js">
+  <link rel="stylesheet" crossorigin href="/js_110_Andrej89Ko/assets/vendor-OjCX3OaH.css">
+  <link rel="stylesheet" crossorigin href="/js_110_Andrej89Ko/assets/index-DSC_BqOa.css">
+</head>
+
+<body data-theme="light">
+  <header class="header-section">
+  <div class="header-container container" data-theme="light">
+    <a class="logo-text" data-theme="light" href="./index.html">Lloyd<span class="logo-span"
+        data-theme="light">Jefferson.</span></a>
+    <div class="theme-switch">
+      <input type="checkbox" id="theme-toggle" />
+      <label for="theme-toggle" class="switch">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-text">
+        <li class="nav-text-item">
+          <a href="#about-me" class="nav-text-link" data-theme="light">About me</a>
+        </li>
+        <li class="nav-text-item">
+          <a href="#projects" class="nav-text-link" data-theme="light">Projects</a>
+        </li>
+        <li class="nav-text-item">
+          <a href="#work-together" class="nav-text-link" data-theme="light">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="menu-button" type="button" data-menu-open>
+      <svg class="icon-menu-button" data-theme="light" width="32" height="32">
+        <use href="/js_110_Andrej89Ko/assets/icons-header-CBEq6pxL.svg#menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+  <main id="app">
+    <div class="mobile-menu" data-modal data-theme="light">
+  <div class="modal-first" data-theme="light">
+    <a class="logo-text" data-theme="light" href="./index.html"
+      >Lloyd<span class="logo-span" data-theme="light">Jefferson.</span></a
+    >
+    <button
+      class="modal-close-bth"
+      data-theme="light"
+      type="button"
+      data-menu-close
+    >
+      <svg
+        class="modal-close-bth-icon"
+        data-theme="light"
+        width="32"
+        height="32"
+        aria-label="close modal icon"
+      >
+        <use href="/js_110_Andrej89Ko/assets/icons-header-CBEq6pxL.svg#close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal-second">
+    <nav class="modal-nav">
+      <div class="modal-theme-switch">
+        <input type="checkbox" id="theme-toggle1" />
+        <label for="theme-toggle1" class="modal-switch">
+          <span class="modal-slider"></span>
+        </label>
+      </div>
+
+      <ul class="modal-nav-list">
+        <li class="modal-nav-item">
+          <a class="modal-nav-link" data-theme="light" href="#about-me">
+            About me
+          </a>
+        </li>
+        <li class="modal-nav-item">
+          <a class="modal-nav-link" data-theme="light" href="#projects">
+            Projects
+          </a>
+        </li>
+        <li class="modal-nav-item">
+          <a class="modal-nav-link" data-theme="light" href="#work-together">
+            Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+    <section class="hero-section" id="hero">
+    <div class="container">
+        <h1 class="hero-title">Hello, I am <img class="hero-image"
+                srcset="data:image/jpeg;base64,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 1x, /js_110_Andrej89Ko/assets/hero-img@2x-DZbpArKF.jpg 2x"
+                src="data:image/jpeg;base64,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" alt="Hero Photo" /><br>
+            <span class="highlight">Fullstack Developer</span>
+        </h1>
+        <div class="hero-footer">
+            <div class="order-btn-wrap">
+                <a href="#work-together" class="order-btn">
+                    <svg class="icon-arrow-hero" width="28" height="16">
+                        <use href="/js_110_Andrej89Ko/assets/symbol-defs-B83yLNp6.svg#icon-arrow"></use>
+                    </svg>Order the project</a>
+                <div class="order-btn-block"></div>
+            </div>
+            <p class="description">
+                I work with people all over the world to create
+                <span class="highlight">impressive</span> and
+                <span class="highlight">functional</span> websites
+                that reflect each client’s unique personality.
+            </p>
+        </div>
+    </div>
+
+    <ul class="social-links-bg social-links">
+        <li><a href="https://www.instagram.com/goitclub/" target="_blank"
+                rel="noreferrer nofollow noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/goITclub/" target="_blank" rel="noreferrer nofollow noopener">Facebook</a>
+        </li>
+        <li><a href="https://www.linkedin.com/school/goit-start-your-career-in-it" target="_blank"
+                rel="noreferrer nofollow noopener">LinkedIn</a>
+        </li>
+        <li><a href="https://github.com/Andrej89Ko/command-project-portfolio" target="_blank"
+                rel="noreferrer nofollow noopener">GitHub</a></li>
+    </ul>
+</section>
+    <section class="about-section" data-theme="light">
+    <div class="container">
+        <h2 class="about-section-header" data-theme="light" id="about-me">ABOUT <span class="highlight"
+                data-theme="light">ME</span></h2>
+        <div class="about-info-container">
+            <div class="about-bio-section">
+                <picture>
+                    <source srcset="/js_110_Andrej89Ko/assets/about-img-desctop-CepS5z5M.jpg 1x, /js_110_Andrej89Ko/assets/about-img-desctop@2x-gRp9Cob5.jpg 2x" media="(min-width: 1280px)">
+                    <source srcset="/js_110_Andrej89Ko/assets/about-img-tablet-DLe47gsb.jpg 1x, /js_110_Andrej89Ko/assets/about-img-tablet@2x-DY9zTP6w.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="/js_110_Andrej89Ko/assets/about-img-mob-Bdtbv0dz.jpg 1x, /js_110_Andrej89Ko/assets/about-img-mob@2x-DzAfZ-qz.jpg 2x" media="(max-width: 767px)">
+                    <img src="/js_110_Andrej89Ko/assets/about-img-mob-Bdtbv0dz.jpg" alt="About me" class="about-images">
+                </picture>
+                <div class="about-me-bio">
+                    <div class="about-bio-container">
+                        <h3 class="about-header" data-theme="light">BIO</h3>
+                    </div>
+                    <div class="about-panel">
+                        <p class="about-description" data-theme="light">
+                            I'm Lloyd Jefferson, a talented programmer specializing in software development. My
+                            expertise
+                            spans various programming
+                            languages and technologies, and I am dedicated to continually enhancing my skills. I thrive
+                            on
+                            seeking unconventional
+                            and creative solutions to problems, leveraging a high level of analytical skills to
+                            effectively
+                            tackle even the most
+                            challenging tasks.
+                        </p>
+                        <p class="about-description" data-theme="light">
+                            Adaptable to both independent and team-oriented work, I collaborate seamlessly with
+                            colleagues,
+                            exchanging ideas and
+                            finding optimal solutions. My professional maturity enables me to navigate challenges and
+                            stressful situations with a
+                            calm demeanor, maintaining a consistently high quality of work. Committed to
+                            self-improvement, I
+                            actively engage in
+                            studying new technologies and practices to stay current with the latest innovations in the
+                            field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-education-section">
+                <div class="about-me-list">
+                    <div class="about-education-container">
+                        <h3 class="about-header" data-theme="light">EDUCATION</h3>
+                    </div>
+                    <div class="ab-panel">
+                        <ul class="about-list" data-theme="light">
+                            <li class="about-item" data-theme="light">2018 - 2019 / Frontend Development Diploma, GoIT
+                                IT
+                                School, New York</li>
+                            <li class="about-item" data-theme="light">2019 - 2020 / Advanced Web Development
+                                Certificate,
+                                GoIT IT School, New York</li>
+                            <li class="about-item" data-theme="light">2020 - 2022 / Advanced Blender Animation
+                                Techniques,
+                                Udemy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-me-list">
+                    <div class="about-role-container">
+                        <h3 class="about-header" data-theme="light">ROLE</h3>
+                    </div>
+                    <div class="ab-panel">
+                        <ul class="about-list-role" data-theme="light">
+                            <li class="about-item-role" data-theme="light">Frontend development</li>
+                            <li class="about-item-role" data-theme="light">HeadlessCMS, WordPress</li>
+                            <li class="about-item-role" data-theme="light">Blender (enjoy)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="tech-skills">
+  <h2 class="visually-hidden">Technical Skills</h2>
+  <div class="wrap">
+    <div class="items-wrap upper-background" id="tech-skills-upper">
+      <div class="items marquee">
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.edu.goit.global/uk/learn/24554709/17039071/17039078/training">
+          <div class="item item-upper">HTML/CSS</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          <div class="item item-upper">JavaScript</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://react.dev/">
+          <div class="item item-upper">React</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://nodejs.dev/">
+          <div class="item item-upper">Node.js</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://reactnative.dev/">
+          <div class="item item-upper">React Native</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.typescriptlang.org/">
+          <div class="item item-upper">Typescript</div>
+        </a>
+      </div>
+      <div aria-hidden="true" class="items marquee ">
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.edu.goit.global/uk/learn/24554709/17039071/17039078/training">
+          <div class="item item-upper">HTML/CSS</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          <div class="item item-upper">JavaScript</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://react.dev/">
+          <div class="item item-upper">React</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://nodejs.dev/">
+          <div class="item item-upper">Node.js</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://reactnative.dev/">
+          <div class="item item-upper">React Native</div>
+        </a>
+        <svg class="upper-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.typescriptlang.org/">
+          <div class="item item-upper">Typescript</div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="items-wrap rotate lower-background" id="tech-skills-lower">
+      <div class="items marquee reverse ">
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.edu.goit.global/uk/learn/24554709/17039071/17039078/training">
+          <div class="item item-lower">HTML/CSS</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          <div class="item item-lower">JavaScript</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://react.dev/">
+          <div class="item item-lower">React</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://nodejs.dev/">
+          <div class="item item-lower">Node.js</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://reactnative.dev/">
+          <div class="item item-lower">React Native</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.typescriptlang.org/">
+          <div class="item item-lower">Typescript</div>
+        </a>
+      </div>
+      <div aria-hidden="true" class="items marquee reverse ">
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.edu.goit.global/uk/learn/24554709/17039071/17039078/training">
+          <div class="item item-lower">HTML/CSS</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          <div class="item item-lower">JavaScript</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://react.dev/">
+          <div class="item item-lower">React</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://nodejs.dev/">
+          <div class="item item-lower">Node.js</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://reactnative.dev/">
+          <div class="item item-lower">React Native</div>
+        </a>
+        <svg class="lower-dots" width="8" height="8">
+          <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-dot"></use>
+        </svg>
+        <a target="_blank"
+           href="https://www.typescriptlang.org/">
+          <div class="item item-lower">Typescript</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="myProject" id="projects" data-theme="light">
+    <div class="container projectContainer" data-theme="light">
+        <h2 data-theme="light" class="titleMain"><span class="mainNotice">my</span> <span
+                class="noticeSpan">projects</span></h2>
+        <div class="projectFWrap" data-theme="light">
+            <ul class="wrapContent" data-theme="light">
+                <li class="wrapContentItem">
+                    <picture>
+                        <source media="(min-width: 1180px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-C2IEem4j.png 1x, /js_110_Andrej89Ko/assets/img2xD-C5D6ah0K.png 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-BcRt-XXJ.png 1x, /js_110_Andrej89Ko/assets/img2xT-xTgsKlex.png 2x">
+                        <source media="(min-width: 320px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-BH8n91Re.png 1x, /js_110_Andrej89Ko/assets/img2xM-DtAH1RBc.png 2x">
+                        <img src="/js_110_Andrej89Ko/assets/img-C2IEem4j.png" alt="walletW">
+                    </picture>
+                    <p class="projectTextTech">react, java script, node js, git</p>
+                    <div data-theme="light" class="wrapBtnText">
+                        <p class="projectTextTitle">wallet webservice</p>
+                        <a target="_blank" rel="noreferrer nofollow noopener"
+                            href="https://www.w3schools.com/html/default.asp" class="projectBtnVisit">visit<svg
+                                class="arrSvg">
+                                <use href="/js_110_Andrej89Ko/assets/arrow-DOOxYbjC.svg#icon-iconarrow"></use>
+                            </svg></a>
+                    </div>
+                </li>
+                <li class="wrapContentItem">
+                    <picture>
+                        <source media="(min-width: 1180px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-1-DsT6QD6T.png 1x, /js_110_Andrej89Ko/assets/img2xD-1-Cd7vL7xE.png 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-1-CP0p_yM5.png 1x, /js_110_Andrej89Ko/assets/img2xT-1-BBi0Y25F.png 2x">
+                        <source media="(min-width: 320px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-1-Dlt3AYDO.png 1x, /js_110_Andrej89Ko/assets/img2xM-1-CVN0Z2E6.png 2x">
+                        <img src="/js_110_Andrej89Ko/assets/img-1-DsT6QD6T.png" alt="service mobile">
+                    </picture>
+                    <p class="projectTextTech">react, java script, node js, git</p>
+                    <div class="wrapBtnText" data-theme="light">
+                        <p class="projectTextTitle">green harvest webservice</p>
+                        <a target="_blank" rel="noreferrer nofollow noopener"
+                            href="https://www.w3schools.com/css/default.asp" class="projectBtnVisit">visit<svg
+                                class="arrSvg">
+                                <use href="/js_110_Andrej89Ko/assets/arrow-DOOxYbjC.svg#icon-iconarrow"></use>
+                            </svg></a>
+                    </div>
+                </li>
+                <li class="wrapContentItem">
+                    <picture>
+                        <source media="(min-width: 1180px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-2-D5H0es2s.png 1x, /js_110_Andrej89Ko/assets/img2xD-2-DGHlkZwd.png 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-2-BqB9-cnK.png 1x, /js_110_Andrej89Ko/assets/img2xT-2-DW3lbhlP.png 2x">
+                        <source media="(min-width: 320px)"
+                            srcset="/js_110_Andrej89Ko/assets/img-2-CMp77g-p.png 1x, /js_110_Andrej89Ko/assets/img2xM-2-DoeYuNna.png 2x">
+                        <img src="/js_110_Andrej89Ko/assets/img-2-D5H0es2s.png" alt="foodservice">
+                    </picture>
+                    <p class="projectTextTech">react, java script, node js, git</p>
+                    <div class="wrapBtnText" data-theme="light">
+                        <p class="projectTextTitle">english exellence webservice</p>
+                        <a target="_blank" rel="noreferrer nofollow noopener"
+                            href="https://www.w3schools.com/js/default.asp" class="projectBtnVisit">visit<svg
+                                class="arrSvg">
+                                <use href="/js_110_Andrej89Ko/assets/arrow-DOOxYbjC.svg#icon-iconarrow"></use>
+                            </svg></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="projectBtnLoad">load more
+        </button>
+    </div>
+</section>
+    <section class="benefits" data-theme='light'>
+  <div class="container" data-theme='light'>
+    <h2 class="section-title" data-theme='light'>
+      <span class="green-word" data-theme='light'>Benefits</span> of working with me
+    </h2>
+    <ul class="icons-container">
+
+      <li class="icons-and-text li-container">
+        <div class="icons-bg" data-theme='light'>
+          <svg class="benefits-icons">
+            <use href="/js_110_Andrej89Ko/assets/icons-benefits-0IYrxYxF.svg#icon-user"></use>
+          </svg>
+        </div>
+        <div class="benefits-text-content">
+          <h3 class="btc-title" data-theme='light'>Expertise</h3>
+          <p class="btc-paragraf" data-theme='light'>
+            With extensive experience in development, I have a deep understanding of
+            programming and website development.
+          </p>
+        </div>
+      </li>
+
+      <li class="icons-and-text2 li-container">
+        <div class="icons-bg" data-theme='light'>
+          <svg class="benefits-icons">
+            <use href="/js_110_Andrej89Ko/assets/icons-benefits-0IYrxYxF.svg#icon-message"></use>
+          </svg>
+        </div>
+        <div class="benefits-text-content">
+          <h3 class="btc-title" data-theme='light'>Communication</h3>
+          <p class="btc-paragraf" data-theme='light'>
+            Understanding your needs and wants is my priority and I am always
+            available for discussions and open to corrections.
+          </p>
+        </div>
+      </li>
+
+      <li class="icons-and-text3 li-container">
+        <div class="icons-bg" data-theme='light'>
+          <svg class="benefits-icons">
+            <use href="/js_110_Andrej89Ko/assets/icons-benefits-0IYrxYxF.svg#icon-brush"></use>
+          </svg>
+        </div>
+        <div class="benefits-text-content">
+          <h3 class="btc-title" data-theme='light'>Art</h3>
+          <p class="btc-paragraf" data-theme='light'>
+            Thanks to my creative nature, I am ready to accept challenges and help
+            you bring your ideas to life.
+          </p>
+        </div>
+      </li>
+
+      <li class="icons-and-text4 li-container">
+        <div class="icons-bg" data-theme='light'>
+          <svg class="benefits-icons">
+            <use href="/js_110_Andrej89Ko/assets/icons-benefits-0IYrxYxF.svg#icon-hourglass"></use>
+          </svg>
+        </div>
+        <div class="benefits-text-content">
+          <h3 class="btc-title" data-theme='light'>Urgent execution</h3>
+          <p class="btc-paragraf" data-theme='light'>
+            I understand how important time is to you. Ready to work quickly and
+            efficiently, without reducing the quality of work.
+          </p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+    <section class="questions-section" data-theme="light">
+    <div class="container">
+        <h2 class="questions-section-header" data-theme="light">Frequently asked <span class="question-accent"
+                data-theme="light">question</span></h2>
+        <ul id="questions-list">
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">What programming languages are most often used in
+                        your project?</h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">In the field of web development, there
+                        are
+                        various
+                        technologies and
+                        programming languages. Typically,
+                        this includes a combination of frontend (client side) and backend (server side) languages.</p>
+                </div>
+            </li>
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">What are the deadlines for the project?</h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">The terms of project implementation
+                        depend to a
+                        large
+                        extent on a number
+                        of factors, such as the
+                        scope of the project,
+                        its complexity, and the availability of resources. Determining exact deadlines is a difficult
+                        task,
+                        and it usually
+                        occurs during the planning phase of the project.</p>
+                </div>
+            </li>
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">What payment methods do you accept?</h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">Payment through credit and debit cards
+                        such as
+                        Visa,
+                        MasterCard,
+                        specialized electronic payment
+                        systems such as PayPal, as well as payments in cryptocurrencies such as Bitcoin, Ethereum and
+                        others.</p>
+                </div>
+            </li>
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">How can I contact you?</h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">In the field of web development, there
+                        are
+                        various
+                        technologies and
+                        programming languages. Typically,
+                        this includes a
+                        combination of frontend (client side) and backend (server side) languages.</p>
+                </div>
+            </li>
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">Do you provide advice or support?</h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">The terms of project implementation
+                        depend to a
+                        large
+                        extent on a number
+                        of factors, such as the
+                        scope of the project,
+                        its complexity, and the availability of resources. Determining exact deadlines is a difficult
+                        task,
+                        and it usually
+                        occurs during the planning phase of the project.</p>
+                </div>
+            </li>
+            <li class="question-item ac" data-theme="light">
+                <div class="question-header-container ac-header">
+                    <h3 class="question-header" data-theme="light">What does the process of developing a software
+                        product look like from idea to implementation?
+                    </h3>
+                    <button type="button" class="ac-trigger">
+                        <svg class="question-button-image" data-theme="light" xmlns="http://www.w3.org/2000/svg"
+                            width="12" height="12">
+                            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-button-image"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="ac-panel">
+                    <p class="question-description ac-text" data-theme="light">Payment through credit and debit cards
+                        such as
+                        Visa,
+                        MasterCard,
+                        specialized electronic payment
+                        systems such as PayPal,
+                        as well as payments in cryptocurrencies such as Bitcoin, Ethereum and others.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</section>
+    <section class="section-reviews" id="reviews">
+  <div class="container">
+    <h2 class="title-reviews">REVIEWS</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper carousel-wrapper"></div>
+      <p class="error-message hidden">Not found</p>
+      <div class="reviews-navigation">
+        <button
+          class="nav-button btn-prev disabled"
+          aria-label="Previous review"
+        >
+          <svg class="nav-icon">
+            <use href="/js_110_Andrej89Ko/assets/arrow-DOOxYbjC.svg#icon-arrow-narrow-right"></use>
+          </svg>
+        </button>
+        <button class="nav-button btn-next" aria-label="Next review">
+          <svg class="nav-icon">
+            <use href="/js_110_Andrej89Ko/assets/arrow-DOOxYbjC.svg#icon-arrow-narrow-right-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>  
+    <section class="contact-section" data-theme="light">
+  <div class="container">
+    <div>
+      <h2 class="title" id="work-together">Let's <span>work together</span></h2>
+    </div>
+    <img class="background" src="/js_110_Andrej89Ko/assets/decor-bg-together-CpHycrbG.png" alt="decor" />
+    <div class="contants-container">
+      <div class="contacts-list">
+        <p class="work-together-text">
+          Contact me to transform your ideas into exceptional solutions.
+        </p>
+        <ul>
+          <li>
+            <a class="contacts" href="tel:+380904567890"><svg width="24" height="24">
+                <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-map"></use>
+              </svg>
+              +38 090 456 78 90</a>
+          </li>
+          <li>
+            <a class="contacts" href="mailto:lloydjefferson@gmail.com"><svg width="24" height="24">
+                <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-mail"></use>
+              </svg>
+              lloydjefferson@gmail.com</a>
+          </li>
+          <li>
+            <a class="contacts" href="https://maps.app.goo.gl/amZVpvXsrTdW1WXNA"><svg width="24" height="24">
+                <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-tel"></use>
+              </svg>
+              USA, New York</a>
+          </li>
+        </ul>
+      </div>
+      <form id="contact-form">
+        <input placeholder="Your email*" class="email-input" type="email" id="email" name="email" required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" />
+        <textarea rows="4" placeholder="Message" id="message" name="message" required></textarea>
+        <button class="button" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+    <div id="modal-together" class="modal-together">
+      <div class="modal-content">
+        <button class="button-close">
+          <svg class="close" width="12" height="12">
+            <use href="/js_110_Andrej89Ko/assets/icons-Cun6Xv1r.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div id="modal-message"></div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer-border" data-theme="light">
+  <div class="container">
+    <div class="footer-wrapper">
+      <div class="footer-wrapper-container">
+        <a class="name-logo" href="./src/index.html">Lloyd<span class="name-logo-span">Jefferson.</span></a>
+        <ul class="footer-list">
+          <li class="address-footer-list">
+            <a class="address-footer-link" href="https://www.instagram.com/goitclub/" aria-label="Перейти в Instagram"
+              target="_blank" rel="noreferrer nofollow noopener">Instagram</a>
+          </li>
+          <li class="address-footer-list">
+            <a class="address-footer-link" href="https://www.facebook.com/goITclub/" aria-label="Перейти в Facebook"
+              target="_blank" rel="noreferrer nofollow noopener">Facebook</a>
+          </li>
+          <li class="address-footer-list">
+            <a class="address-footer-link" href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+              aria-label="Перейти в Linkedin" target="_blank" rel="noreferrer nofollow noopener">Linkedin</a>
+          </li>
+          <li class="address-footer-list">
+            <a class="address-footer-link" href="https://github.com/Andrej89Ko/command-project-portfolio"
+              aria-label="Перейти в GitHub" target="_blank" rel="noreferrer nofollow noopener">GitHub</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container-text">
+        <p class="text">© Copyright 2024. Made by LloydJefferson</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
